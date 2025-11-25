@@ -5,7 +5,7 @@ import Home from './Home.jsx'
 import Create from './Create.jsx'
 import Update from './Update.jsx'
 import Read from './Read.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   const [students, setStudents] = useState([]); 
