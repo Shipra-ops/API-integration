@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Create = ({ setStudents }) => {
   const [name, setName] = useState("");
@@ -24,23 +25,29 @@ const Create = ({ setStudents }) => {
 
   return (
     <div className=" d-flex justify-content-center mt-5">
-      <div className="col-md-4 p-4 shadow rounded bg-white">
+      <div className="col-11 col-sm-10 col-md-8 col-lg-5 col-xl-4 p-4 shadow rounded bg-white">
       <h2>Add Student</h2>
 
           <form onSubmit={handleSubmit}>
-            <input className="form-control mb-2"
+            <input className="form-control mb-2" 
+              required
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
             />
+            
             <input className="form-control mb-2"
+              required
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
             />
+
             <input className="form-control mb-2"
+              required
               placeholder="Phone"
               onChange={(e) => setPhone(e.target.value)}
             />
-            <button className="btn btn-primary">Add</button>
+            <button className="btn btn-primary mt-3">Add</button>
+            <Link to="/" className="btn btn-secondary mt-3">Back</Link>
           </form>
         </div>
     </div>

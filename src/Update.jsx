@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Update = ({ students = [], setStudents }) => {
   const { id } = useParams();
@@ -40,7 +41,7 @@ const Update = ({ students = [], setStudents }) => {
 
   return (
     <div className=" d-flex justify-content-center mt-5">
-      <div className="col-md-4 p-4 shadow rounded bg-white">
+      <div className="col-11 col-sm-10 col-md-8 col-lg-5 col-xl-4 p-4 shadow rounded bg-white">
       <h2 className="text-center mb-4">Edit Student</h2>
 
       {!user ? (
@@ -71,9 +72,10 @@ const Update = ({ students = [], setStudents }) => {
             required
           />
 
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-primary mt-3" type="submit">
             Update
           </button>
+          <Link to="/" className="btn btn-secondary mt-3">Back</Link>
         </form>
       )}
     </div>

@@ -6,14 +6,14 @@ const Home = ({ students, setStudents }) => {
     setStudents(filtered);
   };
   return (
-    <div className="container">
+    <div className="container table-wrapper table-responsive">
       <h2>Students Records</h2>
 
-      <Link to="/create" className="btn btn-add">
+      <Link to="/create" className="btn add-btn" >
         Add new Student
       </Link>
 
-      <table>
+      <table >
         <thead>
           <tr>
             <th>ID</th>
@@ -33,7 +33,7 @@ const Home = ({ students, setStudents }) => {
               <td>{stu.phone}</td>
               <td>
                 <Link to={`/read/${stu.id}`} className="btn btn-info btn-sm me-2"> View </Link>
-                <Link to={`/update/${stu.id}`} className="btn btn-warning btn-sm me-2" > Update</Link>
+                <Link to={`/update/${stu.id}`} className="btn btn-warning btn-sm me-2" >Edit</Link>
                 <button className="btn btn-danger btn-sm" onClick={() => handleDelete(stu.id)} > Delete </button>
               </td>
             </tr>

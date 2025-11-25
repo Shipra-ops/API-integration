@@ -1,19 +1,17 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #131842;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
 }
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
   background-color: #FFF;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-top: 4px solid #674188;
-  margin-left: 200px;
+  margin-right: 50px;
 }
 
 h2 {
@@ -35,6 +33,7 @@ table {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
 }
 
 th, td {
@@ -70,10 +69,10 @@ tr:hover {
   cursor: pointer;
   border-radius: 4px;
   text-decoration: none;
-  color: #FFF;
   font-size: 14px;
   transition: background-color 0.3s, transform 0.2s;
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .btn-primary {
@@ -92,7 +91,40 @@ tr:hover {
   transform: translateY(-2px);
 }
 
-.btn-add {
-  background-color: #533366;
-  border: 1px solid #533366;
+@media (min-width: 600px) and (max-width: 1024px) {
+  table {
+    font-size: 15px;
+  }
+  th, td {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+  th, td {
+    padding: 10px;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    max-width: 720px !important;   
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 const Read = ({ students = [] }) => {
@@ -17,7 +16,7 @@ const Read = ({ students = [] }) => {
 
   return (
     <div className=" d-flex justify-content-center mt-5">
-      <div className="col-md-4 p-4 shadow rounded bg-white">
+      <div className="col-11 col-sm-10 col-md-8 col-lg-5 col-xl-4 p-4 shadow rounded bg-white">
       <h2 className="text-center mb-4">Student Details</h2>
 
       <div className="card p-4 mt-3">
